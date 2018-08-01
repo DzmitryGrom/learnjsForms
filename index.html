@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnJsForms</title>
+    <style>
+
+        .input-wrapper {
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            width: 130px;
+        }
+        label {
+            display: block;
+        }
+        .error-message {
+            position: absolute;
+            top: -3px;
+            right: 0;
+            display: none;
+            font-size: 13px;
+            color: white;
+            letter-spacing: 0.5px;
+            background-color: red;
+            padding: 2px 5px;
+            border-radius: 3px;
+            z-index: 2;
+        }
+        .error {
+            border: 1px solid red;
+        }
+        .valid {
+            border: 1px solid #10da10;
+        }
+        .error + .error-message {
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <form name="first" method="post">
+        <div class="input-wrapper">
+            <label for="firstName">First name</label>
+            <input id="firstName"
+               name="firstName">
+            <span class="error-message"></span>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="secondName">Second name</label>
+            <input id="secondName"
+                   name="secondName">
+            <span class="error-message"></span>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="age">Age</label>
+            <input id="age"
+                   name="age">
+            <span class="error-message"></span>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="email">Email</label>
+            <input id="email" name="email">
+            <span class="error-message"></span>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+            <span class="error-message"></span>
+        </div>
+
+        <button name="submitButton" type="submit" value="submit" >submit</button>
+    </form>
+    <script src="main.js"></script>
+    <script src="validators.js.js"></script>
+</body>
+</html>
